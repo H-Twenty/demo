@@ -1,0 +1,20 @@
+<!-- 问卷详情页面开发 -->
+<view class="detailcontainer">
+  <view class="detail-item">
+    <!-- 左侧图片 -->
+    <image class="images" src='{{questionImg}}'></image>
+    <!-- 右侧 -->
+    <view class="item-right">
+      <view class="item-title">{{questionTitle}}</view>
+      <view class="item-desc">{{questionDesc}}</view>
+    </view>
+  </view>
+  <!-- 分隔符 -->
+  <view class="point"></view>
+  <!-- 按钮 -->
+  <view class="btn-item">
+  <!-- 通过问卷id 查询试卷列表 -->
+    <button data-questionId="{{questionId}}" bindtap="gotoAnswer" wx:if="{{status == '0'}}" class="btn">开始答卷</button>    
+    <button bindtap="hasAnswer" wx:if="{{status == '1'}}" class="btn">已答卷</button>
+  </view>
+</view>

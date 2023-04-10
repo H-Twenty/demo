@@ -1,0 +1,66 @@
+/* pages/home/home.wxss */
+.homecontainer{
+  height: 100%;
+  display: flex;  /*页面布局：弹性布局*/
+  /* 
+    flex-direction:  决定主轴的方向（即项目的排列方向）
+      column：主轴为垂直方向，起点在上沿。
+      更多布局方式：https://blog.csdn.net/Coralpapy/article/details/120381469
+  */
+  flex-direction: column; 
+  /* 
+  box-sizing: border-box; --- 
+      padding和border的值就不会在影响元素的宽高，相当于把padding和border的值都算在content里
+      怪异盒子模型，一般根据实际项目需要自行设置
+  */
+  box-sizing: border-box;
+}
+.item{
+  padding: 50rpx 20rpx;  /*内边距*/
+  height: 200rpx;  /*每个view盒子的高度*/
+  display: flex;
+  /* 定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式  
+    center：元素位于容器的中心。
+  */
+  align-items: center; 
+  /* 设置元素下边框的样式 */
+  border-bottom: 1px solid #e8eaec;
+}
+.images{
+  width: 140rpx;
+  height: 140rpx;
+  border: 1px solid #e8eaec;
+  border-radius: 50%;
+}
+.item-right{
+  padding-left: 15rpx;
+  display: flex;
+  /* flex:1实际代表的是三个属性的简写
+      flex-grow是用来增大盒子的,比如，当父盒子的宽度大于子盒子的宽度，父盒子的剩余空间可以利用flex-grow来设置子盒子增大的占比
+      flex-shrink用来设置子盒子超过父盒子的宽度后，超出部分进行缩小的取值比例
+      flex-basis是用来设置盒子的基准宽度，并且basis和width同时存在basis会把width干掉
+    所以flex：1；的逻辑就是用flex-basis把width干掉，然后再用flex-grow和flex-shrink增大的增大缩小的缩小，达成最终的效果。
+  */
+  flex: 1;
+  flex-direction: column;
+  background-color: #FFF;
+}
+.item-title{
+  font-size: 36rpx;
+  color: #333333;
+}
+.item-desc{
+  padding-top: 15rpx;
+  font-size: 28rpx;
+  color: #666666;
+  display: -webkit-box;  /*自适应布局*/
+  /*允许将块容器的文字限制为指定的行数,并用省略号填充尾部*/
+  -webkit-line-clamp: 1; 
+  overflow: hidden;/*超出的文本隐藏*/
+  /*溢出用省略号显示(...)  搭配 overflow使用*/
+  text-overflow: ellipsis;  
+  /* 从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式） */
+  -webkit-box-orient: vertical;
+  /*对英文单词进行断句换行   换行时，若单词拼写不完全，紧接着前面的单词，并强行断句换行 */
+  word-break: break-all;
+}

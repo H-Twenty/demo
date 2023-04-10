@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/mypage/mypage",
+    "pages/index/index",
+    "pages/detail/index",
+    "pages/answer/index",
+    "pages/logs/logs",
+    "pages/myanswer/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#6ECEB0",
+    "navigationBarTitleText": "压机否大学",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color":"#000000",
+    "selectedColor":"#6ECEB0",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath":"/images/home.png",
+      "selectedIconPath":"/images/home_select.png"
+    }, {
+      "pagePath": "pages/mypage/mypage",
+      "text": "我的",
+      "iconPath":"/images/my.png",
+      "selectedIconPath":"/images/my_select.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

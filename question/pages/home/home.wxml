@@ -1,0 +1,12 @@
+<!--pages/home/home.wxml-->
+<view class="homecontainer">
+  <view wx:for="{{tableList}}" wx:key="index" class="item">
+    <image class="images" src="{{item.questionImg}}"></image>
+    <!-- 通过data-index  data-item 来传递事件参数  bindtap:绑定点击事件-->
+    <view class="item-right" data-item="{{item}}" data-questionId="{{item.questionId}}" bindtap="gotoDetail">
+      <view class="item-title">{{item.questionTitle}}</view>
+      <view class="item-desc">{{item.questionDesc}}</view>
+      <view class="item-desc">参与人数：{{item.joinCount}}人</view>
+    </view>
+  </view>
+</view>
